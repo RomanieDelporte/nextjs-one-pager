@@ -9,13 +9,13 @@ export default function Card({imageUrl, title, description, link, label}: {
 }) {
     return (
         <main
-            className="border border-neutral-100 p-2 rounded w-[380px] max-w[380px] h-[330px] max-h-[330px] mt-4 flex justify-center items-center flex-col">
-            <div className="bg-neutral-500 rounded-full flex justify-center items-center w-[50px] h-[50px] -mt-8">
+            className="border border-neutral-200 p-2 rounded w-[380px] max-w[380px] h-[330px] max-h-[330px] flex justify-center items-center flex-col">
+            <div className="bg-neutral-500 rounded-full flex justify-center items-center w-[70px] h-[70px] -mt-28">
                 <img className="w-4 h-10 object-contain items-center flex" src={ imageUrl } alt="card-img"/>
             </div>
-            <div className="container p-10
+            <div className="container p-6
             text-center">
-                <h2 className="text-white medium">{ title }</h2>
+                <h2 className="text-white medium h-[60px]">{ title }</h2>
                 <div className="text-left mt-2">
                     <p className="text-sm text-neutral-200 mt-5 h-24 max-h-24">{ description }</p>
                     <Link className="text-accent-100 relative" href={ link } target="_blank" rel="noopener noreferrer">
