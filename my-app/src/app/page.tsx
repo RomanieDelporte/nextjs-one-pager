@@ -1,16 +1,21 @@
-import Image from "next/image";
-import Card from "@/app/card";
+import Card from "@/app/components/card";
+import cardData from "@/app/utils/cardData";
+import Header from "@/app/components/header";
 
 export default function Home() {
+    const cardsData = cardData();
+
     return (
-        <main className="flex min-h-screen flex-col justify-between">
+        <main className="flex min-h-screen flex-col justify-between py-8 pb-40">
             <div className="flex flex-col">
-                <h1 className="font-bold text-3xl leading-tight">first one pager in react</h1>
-                <Card imageUrl="/icon-arrow.svg" title="Aankoop & installatie"
-                      description="Wenst u graag een nieuwe computer, laptop, printer of een ander apparaat? Ik bekijk samen met u, stap voor stap, wat u exact nodig heeft."
-                      link="https://google.com"
-                      label="Ontdek meer"
-                />
+                <div className="flex justify-center">
+                    <Header/>
+                </div>
+                <div>
+                    {cardsData.map((card, index) => (
+                        <Card key={index} {...card} />
+                    ))}
+                </div>
             </div>
         </main>
     );
