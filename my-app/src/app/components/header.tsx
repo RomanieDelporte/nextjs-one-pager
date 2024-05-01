@@ -20,12 +20,16 @@ export default function Header() {
     return (
         <header className="header flex items-center">
             <div>
-                <Image src="/headerLogo.svg" alt="headerlogo" width={100} height={100}/>
+                <Image src="/headerLogo.svg"
+                       alt="headerlogo"
+                       width={100}
+                       height={100}/>
             </div>
             <nav className="ml-28">
                 <ul className="flex mr-2">
                     {navItems.map((item: NavItem, index) => (
-                        <li key={index} className={`text-base ${pathname === item.href ? 'text-accent-100 font-medium' : 'text-base-100 font-medium'} mr-4 hover:text-accent-100 cursor-pointer`}
+                        <li key={index}
+                            className={`text-base ${pathname === item.href ? 'text-accent-100 font-medium' : 'text-base-100 font-medium'} mr-4 hover:text-accent-100 cursor-pointer`}
                         >
                             <a>{item.label}</a>
                         </li>
