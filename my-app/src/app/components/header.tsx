@@ -25,11 +25,11 @@ export default function Header() {
                        width={100}
                        height={100}/>
             </div>
-            <nav className="ml-28">
-                <ul className="flex mr-2">
+            <nav className="ml-48 xl:ml-52">
+                <ul className="flex">
                     {navItems.map((item: NavItem, index) => (
                         <li key={index}
-                            className={`text-base ${pathname === item.href ? 'text-accent-100 font-medium' : 'text-base-100 font-medium'} mr-4 hover:text-accent-100 cursor-pointer`}
+                            className={` font-leagueSpartan ${pathname === item.href ? 'text-accent-100 font-medium' : 'text-base-100 font-medium'} mr-16 hover:text-accent-100 cursor-pointer text-2xl`}
                         >
                             <a>{item.label}</a>
                         </li>
