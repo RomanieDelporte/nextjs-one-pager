@@ -22,10 +22,10 @@ export default function Home() {
 
             <div className="flex justify-center flex-col items-center bg-neutral-600">
                 <div className="mb-10 mt-28 text-center">
-                    <p className="font-sans text-accent-100">ontdek ons</p>
-                    <h2 className="text-base-100 text-2xl font-medium">ruim aanbod</h2>
+                    <p className="font-sans text-accent-100 text-lg italic">ontdek ons</p>
+                    <h2 className="text-base-100 text-2xl font-bold">ruim aanbod</h2>
                 </div>
-                <div className="my-64">
+                <div className="mb-64 mt-12">
                     <div className="grid grid-cols-3 gap-4 mb-1">
                         {cardsData.map((card, index) => (
                             <Card key={index} {...card} />
@@ -36,7 +36,7 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            <div className="-mt-24 flex items-center justify-center">
+            <div className="-mt-36 flex items-center justify-center">
                 <ContactCard buttonLabel="contacteer Tom"/>
             </div>
             <Footer/>

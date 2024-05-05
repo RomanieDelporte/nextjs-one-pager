@@ -10,7 +10,7 @@ export default function Header() {
 
     const navItems: NavItem[] = [
         {label: 'Aanbod', href: '/'},
-        {label: 'Regio"s', href: '/regions'},
+        {label: 'Regio\'s', href: '/regions'},
         {label: 'Over ons', href: '/about'},
         {label: 'Tarieven', href: '/prices'},
         {label: 'Downloads', href: '/downloads'},
@@ -21,7 +21,7 @@ export default function Header() {
         <header className="header flex items-center w-full justify-center">
             <div>
                 <Image
-                    className="mr-14"
+                    className="mr-48"
                     src="/headerLogo.svg"
                     alt="headerlogo"
                     width={100}

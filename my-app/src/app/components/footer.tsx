@@ -13,58 +13,63 @@ export default function Footer() {
     ];
 
     return (
-        <header className="flex p-40 pb-20">
-            <div className="flex flex-col grow">
-                <h2 className="text-neutral-500 font-bold text-[22px]">It-Hulp aan huis</h2>
-                <div className="flex flex-col">
+        <footer className="flex flex-wrap p-8 lg:p-16 justify-around">
+            <div className="flex flex-col ml-28">
+                <h2 className="text-neutral-500 font-bold text-lg lg:text-2xl mb-4">It-Hulp aan huis</h2>
+                <p>
                     <p>Knokstraat 36</p>
                     <p>9630 Zwalm</p>
                     <p>BE 0788.869.029</p>
-                    <div>
-                        <p className="underline text-accent-100">tom@it-hulpaanhuis.be</p>
-                        <p className="underline text-accent-100">+32 (0) 474 04 06 80</p>
+                </p>
+                <div className="flex flex-col">
+                    <a
+                        href="mailto:tom@it-hulpaanhuis.be"
+                        className="underline text-accent-100"
+                    >tom@it-hulpaanhuis.be
+                    </a>
+                    <a
+                        href="tel:+320474040680"
+                        className="underline text-accent-100"
+                    >+32 (0) 474 04 06 80
+                    </a>
+                </div>
+                <div className="flex mt-4">
+                    <div className="rounded-full flex justify-center items-center bg-neutral-500 w-10 h-10 mr-4">
+                        <Facebook
+                            color="white"
+                            size={20}
+                        />
                     </div>
-                    <div className="flex mt-[10px]">
-                        <div className="rounded-full flex justify-center items-center bg-neutral-500 w-[50px] h-[50px] mr-4">
-                            <Facebook
-                                color="white"
-                                size={20}
-                            />
-                        </div>
-                        <div className="rounded-full flex justify-center items-center bg-neutral-500 w-[50px] h-[50px] mr-4">
-                            <Linkedin
-                                color="white"
-                                size={20}
-                            />
-                        </div>
+                    <div className="rounded-full flex justify-center items-center bg-neutral-500 w-10 h-10">
+                        <Linkedin
+                            color="white"
+                            size={20}
+                        />
                     </div>
                 </div>
             </div>
-            <nav className="w-56">
-                <h2 className="text-neutral-500 font-bold text-[22px]">Sitemap</h2>
-                <ul className="flex mr-2 flex-col">
+            <nav className="ml-28">
+                <h2 className="text-neutral-500 font-bold text-lg lg:text-2xl mb-4">Sitemap</h2>
+                <ul className="flex flex-col">
                     {navItems.map((item: NavItem, index) => (
                         <li
                             key={index}
-                            className="underline text-neutral-500"
+                            className="underline text-neutral-500 mb-2"
                         >
                             <a>{item.label}</a>
                         </li>
                     ))}
                 </ul>
             </nav>
-            <div className="ml-20 mt-8">
-                <p className="text-neutral-500 underline">Algemene voorwaarden</p>
-                <p className="text-neutral-500 underline">Privacybeleid</p>
-                <p className="text-neutral-500 underline">Cookiebeleid</p>
-
-                <div className="mt-8">
-                    <p className="text-neutral-200 whitespace-normal w-[220px]">
-                        © 2022 IT-Hulp aan huis
-                        gebouwd door digitalastronaut.be
-                    </p>
+            <div className="mt-12 pr-16">
+                <p className="text-neutral-500 underline mb-2">Algemene voorwaarden</p>
+                <p className="text-neutral-500 underline mb-2">Privacybeleid</p>
+                <p className="text-neutral-500 underline mb-2">Cookiebeleid</p>
+                <div>
+                    <p className="text-neutral-200 whitespace-normal">© 2022 IT-Hulp aan huis</p>
+                    <p className="text-neutral-200 whitespace-normal">gebouwd door digitalastronaut.be</p>
                 </div>
             </div>
-        </header>
+        </footer>
     );
 }
