@@ -34,6 +34,7 @@ export default function Header() {
                         <li
                             key={index}
                             className={` font-leagueSpartan ${pathname === item.href ? 'text-accent-100 font-medium' : 'text-base-100 font-medium'} mr-16 hover:text-accent-100 cursor-pointer text-2xl`}
+                            onClick={() => console.log(item.href)}
                         >
                             <a>{item.label}</a>
                         </li>
