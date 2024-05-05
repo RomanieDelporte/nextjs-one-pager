@@ -15,7 +15,7 @@ export default function Card({imageUrl, title, description, link, label}: {
             </div>
             <div className="container p-6
             text-center">
-                <h2 className="text-white medium h-[60px]">{ title }</h2>
+                <h2 className="text-white medium h-[60px] text-[26px]">{ title }</h2>
                 <div className="text-left mt-2">
                     <p className="text-sm text-neutral-200 mt-5 h-24 max-h-24">{ description }</p>
                     <Link className="text-accent-100 relative" href={ link } target="_blank" rel="noopener noreferrer">
